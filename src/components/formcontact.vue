@@ -45,7 +45,7 @@ export default {
   methods: {
     async kirim() {
       this.sending = true; // kondisi saat sedang kirim pesan :D
-      let { data, error } = await this.$supabase.from("tb_kontak").insert([this.form]);
+      let { data, error } = await this.$supabase.from("tb-kontak").insert([this.form]);
       if (data) {
         this.sent = true;
         this.sending = false;
